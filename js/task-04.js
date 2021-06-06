@@ -21,9 +21,9 @@ incrementBtn.addEventListener('click', evt => {
 })
 
 
-/*const counter = (el, z) => {
+/*const counter = (el, sign) => {
     el.addEventListener('click', evt => {
-        z ? counterValue += 1 : counterValue -= 1;
+        sign ? counterValue += 1 : counterValue -= 1;
         spanEl.textContent = counterValue;
     })
 }
