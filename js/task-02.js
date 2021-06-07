@@ -11,7 +11,7 @@ const ulEls = document.querySelector('#ingredients');
 let listLi = ingredients.map(el => {
   const createElLi = document.createElement('li');
   createElLi.textContent = el;
-  return createElLi
+  return createElLi;
 });
 
-ulEls.append(...listLi)
+ulEls.append(...listLi);
