@@ -1,15 +1,15 @@
 
 document.querySelector('#validation-input').addEventListener('blur', ev => {
-    const elem = ev.currentTarget;
-    const valueInputLen = elem.value.length;
-    const dataLen = elem.getAttribute('data-length');
-    if (valueInputLen <= dataLen) {
-        elem.classList.add('valid');
-        elem.classList.remove('invalid');
+    const inputEl = ev.currentTarget;
+    const lenValueInput = inputEl.value.length;
+    const lenValueValid = inputEl.getAttribute('data-length');
+    if (lenValueInput <= lenValueValid) {
+        inputEl.classList.add('valid');
+        inputEl.classList.remove('invalid');
     }
     else {
-        elem.classList.remove('valid');
-        elem.classList.add('invalid');
+        inputEl.classList.remove('valid');
+        inputEl.classList.add('invalid');
     }
 })
 

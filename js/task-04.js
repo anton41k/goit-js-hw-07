@@ -5,20 +5,16 @@ const spanEl = document.querySelector('#value');
 
 const increment = () => {
     counterValue += 1;
+    spanEl.textContent = counterValue;
 }
 const decrement = () => {
     counterValue -= 1;
+    spanEl.textContent = counterValue;
 }
 
-decrementBtn.addEventListener('click', evt => {
-    decrement();
-    spanEl.textContent = counterValue;
-})
+decrementBtn.addEventListener('click', decrement)
 
-incrementBtn.addEventListener('click', evt => {
-    increment();
-    spanEl.textContent = counterValue;
-})
+incrementBtn.addEventListener('click', increment)
 
 
 /*const counter = (el, sign) => {

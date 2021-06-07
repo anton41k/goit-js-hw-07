@@ -19,6 +19,7 @@ const destroyBoxes = () => {
     document.querySelectorAll('.create-div').forEach(el => {
         el.remove();
     });
+    inputEl.value = 0;
 }
 
 const inputEl = document.querySelector('[type="number"]');
@@ -28,8 +29,5 @@ document.querySelector('[data-action="render"]').addEventListener('click', ev =>
     inputEl.value = 0;
 })
 
-document.querySelector('[data-action="destroy"]').addEventListener('click', ev => {
-    destroyBoxes();
-    inputEl.value = 0;
-})
+document.querySelector('[data-action="destroy"]').addEventListener('click', destroyBoxes)
 
