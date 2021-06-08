@@ -1,12 +1,15 @@
+const changeClass = (element, addCls, removeCls) => {
+  element.classList.add(addCls);
+  element.classList.remove(removeCls);
+};
+
 document.querySelector('#validation-input').addEventListener('blur', ev => {
   const inputEl = ev.currentTarget;
   const lenValueInput = inputEl.value.length;
   const lenValueValid = inputEl.getAttribute('data-length');
   if (lenValueInput == lenValueValid) {
-    inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
+    changeClass(inputEl, 'valid', 'invalid');
   } else {
-    inputEl.classList.remove('valid');
-    inputEl.classList.add('invalid');
+    changeClass(inputEl, 'invalid', 'valid');
   }
 });
